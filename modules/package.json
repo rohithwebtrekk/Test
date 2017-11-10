@@ -1,8 +1,8 @@
 {
-  "name": "angular2-app-dev-course-code",
+  "name": "Webtrekk",
   "version": "1.0.0",
   "description": "Copies source code from destination folder into lab folders and overlays specific lab files.",
-  "author": "Dan Wahlin",
+  "author": "Rohith",
   "scripts": {
     "start": "node setup.js"
   },

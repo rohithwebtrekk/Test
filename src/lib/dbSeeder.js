@@ -28,82 +28,22 @@ class DBSeeder {
             "Marcus,HighTower,Male,acmecorp.com",
             "Jesse,Smith,Female,gmail.com",
             "Albert,Einstein,Male,outlook.com",
-            "Dan,Wahlin,Male,yahoo.com",
-            "Ward,Bell,Male,gmail.com",
-            "Brad,Green,Male,gmail.com",
-            "Igor,Minar,Male,gmail.com",
-            "Miško,Hevery,Male,gmail.com",
-            "Michelle,Avery,Female,acmecorp.com",
-            "Heedy,Wahlin,Female,hotmail.com",
-            "Thomas,Martin,Male,outlook.com",
-            "Jean,Martin,Female,outlook.com",
-            "Robin,Cleark,Female,acmecorp.com",
-            "Juan,Paulo,Male,yahoo.com",
-            "Gene,Thomas,Male,gmail.com",
-            "Pinal,Dave,Male,gmail.com",
-            "Fred,Roberts,Male,outlook.com",
-            "Tina,Roberts,Female,outlook.com",
-            "Cindy,Jamison,Female,gmail.com",
-            "Robyn,Flores,Female,yahoo.com",
-            "Jeff,Wahlin,Male,gmail.com",
-            "Danny,Wahlin,Male,gmail.com",
-            "Elaine,Jones,Female,yahoo.com",
-            "John,Papa,Male,gmail.com"
+
         ];
         var addresses =
         [
             "1234 Anywhere St.",
             "435 Main St.",
-            "1 Atomic St.",
-            "85 Cedar Dr.",
-            "12 Ocean View St.",
-            "1600 Amphitheatre Parkway",
-            "1604 Amphitheatre Parkway",
-            "1607 Amphitheatre Parkway",
-            "346 Cedar Ave.",
-            "4576 Main St.",
-            "964 Point St.",
-            "98756 Center St.",
-            "35632 Richmond Circle Apt B",
-            "2352 Angular Way",
-            "23566 Directive Pl.",
-            "235235 Yaz Blvd.",
-            "7656 Crescent St.",
-            "76543 Moon Ave.",
-            "84533 Hardrock St.",
-            "5687534 Jefferson Way",
-            "346346 Blue Pl.",
-            "23423 Adams St.",
-            "633 Main St.",
-            "899 Mickey Way"
+            "1 Atomic St."
+
         ];
 
         var citiesStates =
         [
             "Phoenix,AZ,Arizona",
             "Encinitas,CA,California",
-            "Seattle,WA,Washington",
-            "Chandler,AZ,Arizona",
-            "Dallas,TX,Texas",
-            "Orlando,FL,Florida",
-            "Carey,NC,North Carolina",
-            "Anaheim,CA,California",
-            "Dallas,TX,Texas",
-            "New York,NY,New York",
-            "White Plains,NY,New York",
-            "Las Vegas,NV,Nevada",
-            "Los Angeles,CA,California",
-            "Portland,OR,Oregon",
-            "Seattle,WA,Washington",
-            "Houston,TX,Texas",
-            "Chicago,IL,Illinois",
-            "Atlanta,GA,Georgia",
-            "Chandler,AZ,Arizona",
-            "Buffalo,NY,New York",
-            "Albuquerque,AZ,Arizona",
-            "Boise,ID,Idaho",
-            "Salt Lake City,UT,Utah",
-            "Orlando,FL,Florida"
+            "Seattle,WA,Washington"
+
         ];
 
         var citiesIds = [5, 9, 44, 5, 36, 17, 16, 9, 36, 14, 14, 6, 9, 24, 44, 36, 25, 19, 5, 14, 5, 23, 38, 17];
@@ -116,17 +56,7 @@ class DBSeeder {
         { "product": "Basket", "price": 29.99, "quantity": 1 },
         { "product": "Yarn", "price": 9.99, "quantity": 1 },
         { "product": "Needes", "price": 5.99, "quantity": 1 },
-        { "product": "Speakers", "price": 499.99, "quantity": 1 },
-        { "product": "iPod", "price": 399.99, "quantity": 1 },
-        { "product": "Table", "price": 329.99, "quantity": 1 },
-        { "product": "Chair", "price": 129.99, "quantity": 4 },
-        { "product": "Lamp", "price": 89.99, "quantity": 5 },
-        { "product": "Call of Duty", "price": 59.99, "quantity": 1 },
-        { "product": "Controller", "price": 49.99, "quantity": 1 },
-        { "product": "Gears of War", "price": 49.99, "quantity": 1 },
-        { "product": "Lego City", "price": 49.99, "quantity": 1 },
-        { "product": "Baseball", "price": 9.99, "quantity": 5 },
-        { "product": "Bat", "price": 19.99, "quantity": 1 }
+    
         ];
 
         Customer.remove({});

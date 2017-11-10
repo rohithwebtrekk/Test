@@ -2,7 +2,7 @@
     <div class="container">
         <header>
             <h3>
-                <span class="glyphicon glyphicon-user"></span>
+
                 {{ title }}
             </h3>
         </header>
@@ -17,12 +17,18 @@
                 <a class="btn btn-default" [routerLink]="['/customers', '0']">Add New Customer</a>
             </div>
         </div>
-    
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-12">
+                <img src="/images/landing-image.jpg" alt="landing-image" width="100%"/>
+              </div>
+            </div>
+        </div>
         <customers-grid [customers]="filteredCustomers"></customers-grid>
 
-        <pagination [totalItems]="totalRecords" 
-            [pageSize]="pageSize" 
+        <pagination [totalItems]="totalRecords"
+            [pageSize]="pageSize"
             (pageChanged)="pageChanged($event)"></pagination>
-          
+
     </div>
 </div>
