@@ -12,6 +12,7 @@ export interface ICustomer {
     orderTotal?: number;
     birthday?:Date;
     lastContact?:Date;
+    customerLifeTimeValue?:number;
 }
 
 export interface IState {

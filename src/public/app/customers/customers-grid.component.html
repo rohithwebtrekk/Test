@@ -10,7 +10,7 @@
                             <th (click)="sort('birthday')">Birthday</th>
                             <th (click)="sort('gender')">Gender</th>
                             <th (click)="sort('lastContact')">Last Contact</th>
-                            <th (click)="sort('orderTotal')">Customer Life Time Value</th>
+                            <th (click)="sort('customerLifeTimeValue')">Customer Life Time Value</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -20,7 +20,7 @@
                             <td>{{ customer.birthday | date : 'yyyy-MM-dd' }}</td>
                             <td>{{ customer.gender}}</td>
                             <td>{{ customer.lastContact }}</td>
-                            <td>{{ customer.orderTotal | number : '1.2-2' }}</td>
+                            <td>{{ customer.customerLifeTimeValue | number : '1.2-2' }}</td>
                         </tr>
                         <tr *ngIf="!customers.length">
                             <td>&nbsp;</td>

@@ -24,7 +24,8 @@ var CustomerEditReactiveComponent = /** @class */ (function () {
             lastName: '',
             gender: '',
             birthday: new Date(),
-            lastContact: new Date()
+            lastContact: new Date(),
+            customerLifeTimeValue: 0
         };
         this.operationText = 'Insert';
     }
@@ -53,6 +54,7 @@ var CustomerEditReactiveComponent = /** @class */ (function () {
             stateId: [this.customer.stateId, forms_1.Validators.required],
             birthday: [this.customer.birthday],
             lastContact: [this.customer.lastContact],
+            customerLifeTimeValue: [this.customer.customerLifeTimeValue],
         });
     };
     CustomerEditReactiveComponent.prototype.getStates = function () {

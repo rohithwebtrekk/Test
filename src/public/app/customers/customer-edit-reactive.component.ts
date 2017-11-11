@@ -18,7 +18,8 @@ export class CustomerEditReactiveComponent implements OnInit {
     lastName: '',
     gender: '',
     birthday: new Date(),
-    lastContact: new Date();
+    lastContact: new Date(),
+    customerLifeTimeValue: 0;
   };
   states: IState[];
   errorMessage: string;
@@ -58,6 +59,7 @@ export class CustomerEditReactiveComponent implements OnInit {
         stateId:    [this.customer.stateId, Validators.required]
         birthday:   [this.customer.birthday],
         lastContact: [this.customer.lastContact],
+        customerLifeTimeValue: [this.customer.customerLifeTimeValue],
       });
   }
 

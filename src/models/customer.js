@@ -15,6 +15,7 @@ const CustomerSchema = new Schema({
   stateId     : { type : Number, required: true },
   birthday    : { type : Date, required: true },
   lastContact : { type : Date, required: true },
+  customerLifeTimeValue : { type : Number, required: true },
   state       : State.schema ,
   gender      : { type : String },
   orderCount  : {  type : Number },

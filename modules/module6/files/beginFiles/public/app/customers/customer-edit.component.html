@@ -1,45 +1,87 @@
 <div>
   <header>
       <h3>
-          
+
           {{ customer.firstName }} {{ customer.lastName }}
       </h3>
   </header>
   <br />
-  <form (ngSubmit)="submit()" #customerForm="ngForm" class="editForm" novalidate>
+  <form (ngSubmit)="submit()"
+        #customerForm="ngForm"
+        class="editForm"
+        novalidate>
     <div class="form-group">
       <label>First Name</label>
-      <input type="text" class="form-control" name="firstName" [(ngModel)]="customer.firstName" #firstName="ngModel" required>
-      <div class="alert alert-danger" [hidden]="firstName.untouched || firstName.valid">First Name is required</div>
+      <input type="text"
+             class="form-control"
+             name="firstName"
+             [(ngModel)]="customer.firstName"
+             #firstName="ngModel"
+             required>
+      <div class="alert alert-danger"
+           [hidden]="firstName.untouched || firstName.valid">First Name is required</div>
     </div>
     <div class="form-group">
       <label>Last Name</label>
-      <input type="text" class="form-control" name="lastName" [(ngModel)]="customer.lastName" #lastName="ngModel" required>
-      <div class="alert alert-danger" [hidden]="lastName.untouched || lastName.valid">Last Name is required</div>
+      <input type="text"
+             class="form-control"
+             name="lastName"
+             [(ngModel)]="customer.lastName"
+             #lastName="ngModel" r
+             required>
+      <div class="alert alert-danger"
+           [hidden]="lastName.untouched || lastName.valid">Last Name is required</div>
     </div>
     <div class="form-group">
       <label>Gender</label>
       <br />
       <div class="radio">
         <label>
-          <input type="radio" name="gender" [(ngModel)]="customer.gender" #gender="ngModel" value="Male" required />
+          <input type="radio"
+                 name="gender"
+                 [(ngModel)]="customer.gender"
+                 #gender="ngModel"
+                 value="Male"
+                 required />
           Male
         </label>
       </div>
       <div class="radio">
         <label>
-          <input type="radio" name="gender" [(ngModel)]="customer.gender" #gender="ngModel" value="Female" required />
+          <input type="radio"
+                 name="gender"
+                 [(ngModel)]="customer.gender"
+                 #gender="ngModel"
+                  value="Female"
+                 required />
           Female
         </label>
       </div>
     </div>
     <div class="form-group">
       <label>Birthday</label>
-      <input type="date" class="form-control" name="birthday" [(ngModel)]="customer.birthday" #birthday="ngModel" required>
+      <input type="date"
+             class="form-control"
+             name="birthday"
+             [(ngModel)]="customer.birthday"
+             #birthday="ngModel"
+             required>
     </div>
     <div class="form-group">
       <label>lastContact</label>
-      <input type="date" class="form-control" name="lastContact" [(ngModel)]="customer.lastContact" #lastContact="ngModel" required>
+      <input type="date"
+             class="form-control"
+             name="lastContact"
+             [(ngModel)]="customer.lastContact"
+             #lastContact="ngModel" required>
+    </div>
+    <div class="form-group">
+      <label>Customer Life Time Value</label>
+      <input type="number"
+             class="form-control"
+             name="number"
+             [(ngModel)]="customer.customerLifeTimeValue"
+             #lastContact="ngModel" required>
     </div>
     <div class="form-group">
       <label>State</label>

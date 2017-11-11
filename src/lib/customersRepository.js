@@ -57,7 +57,7 @@ class CustomersRepository {
             let count = custsCount;
             console.log(`Customers count: ${count}`);
 
-            Customer.find({}, { '_id': 0, 'firstName': 1, 'lastName': 1, 'city': 1, 'state': 1, 'orderCount': 1, 'gender': 1, 'birthday': 1, 'lastContact': 1 })
+            Customer.find({}, { '_id': 0, 'firstName': 1, 'lastName': 1, 'city': 1, 'state': 1, 'orderCount': 1, 'gender': 1, 'birthday': 1, 'lastContact': 1, 'customerLifeTimeValue': 1 })
                     .skip(skip)
                     .limit(top)
                     .exec((err, customersSummary) => {
@@ -97,7 +97,7 @@ class CustomersRepository {
         customer.gender = body.gender;
         customer.birthday = body.birthday;
         customer.lastContact = body.lastContact;
-
+        customer.customerLifeTimeValue = body.customerLifeTimeValue;
         customer.save((err, customer) => {
             if (err) {
                 console.log(`*** CustomersRepository insertCustomer error: ${err}`);
@@ -126,7 +126,7 @@ class CustomersRepository {
             customer.gender = body.gender || customer.gender;
             customer.birthday = body.birthday || customer.birthday;
             customer.lastContact = body.lastContact || customer.lastContact;
-
+            customer.customerLifeTimeValue = body.customerLifeTimeValue || customer.customerLifeTimeValue;
 
             customer.save((err, customer) => {
                 if (err) {

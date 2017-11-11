@@ -15,7 +15,8 @@ export class CustomerEditComponent implements OnInit {
     lastName: '',
     gender: '',
     birthday: new Date(),
-    lastContact: new Date();
+    lastContact: new Date(),
+    customerLifeTimeValue: 0,
   };
   states: IState[];
   errorMessage: string;

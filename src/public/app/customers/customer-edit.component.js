@@ -22,7 +22,8 @@ var CustomerEditComponent = /** @class */ (function () {
             lastName: '',
             gender: '',
             birthday: new Date(),
-            lastContact: new Date()
+            lastContact: new Date(),
+            customerLifeTimeValue: 0,
         };
         this.operationText = 'Insert';
     }

@@ -1,45 +1,81 @@
 <div>
   <header>
       <h3>
-          
+
           {{ customer.firstName }} {{ customer.lastName }}
       </h3>
   </header>
   <br />
-  <form [formGroup]="customerForm" (ngSubmit)="submit(customerForm)" class="editForm" novalidate>
+  <form [formGroup]="customerForm"
+        (ngSubmit)="submit(customerForm)"
+        class="editForm"
+        novalidate>
     <div class="form-group">
       <label>First Name</label>
-      <input type="text" class="form-control" formControlName="firstName" />
-      <div class="alert alert-danger" [hidden]="customerForm.controls.firstName.untouched || customerForm.controls.firstName.valid">First Name is required</div>
+      <input type="text"
+             class="form-control"
+             formControlName="firstName" />
+      <div class="alert alert-danger"
+           [hidden]="customerForm.controls.firstName.untouched ||
+           customerForm.controls.firstName.valid">First Name is required</div>
     </div>
     <div class="form-group">
       <label>Last Name</label>
-      <input type="text" class="form-control" formControlName="lastName">
-      <div class="alert alert-danger" [hidden]="customerForm.controls.lastName.untouched || customerForm.controls.lastName.valid">Last Name is required</div>
+      <input type="text"
+             class="form-control"
+             formControlName="lastName">
+      <div class="alert alert-danger"
+           [hidden]="customerForm.controls.lastName.untouched ||
+           customerForm.controls.lastName.valid">Last Name is required</div>
     </div>
     <div class="form-group">
       <label>Gender</label>
       <br />
       <div class="radio">
         <label>
-          <input type="radio" name="gender" formControlName="gender" value="Male" />
+          <input type="radio"
+                 name="gender"
+                 formControlName="gender"
+                 value="Male" />
           Male
         </label>
       </div>
       <div class="radio">
         <label>
-          <input type="radio" name="gender" formControlName="gender" value="Female"  />
+          <input type="radio"
+                 name="gender"
+                 formControlName="gender"
+                 value="Female"  />
           Female
         </label>
       </div>
     </div>
     <div class="form-group">
       <label>Birthday</label>
-      <input type="date" class="form-control" name="birthday" [(ngModel)]="customer.birthday" #birthday="ngModel" required>
+      <input type="date"
+             class="form-control"
+             name="birthday"
+             [(ngModel)]="customer.birthday"
+             #birthday="ngModel"
+             required>
     </div>
     <div class="form-group">
       <label>lastContact</label>
-      <input type="date" class="form-control" name="lastContact" [(ngModel)]="customer.lastContact" #lastContact="ngModel" required>
+      <input type="date"
+             class="form-control"
+             name="lastContact"
+             [(ngModel)]="customer.lastContact"
+             #lastContact="ngModel"
+             required>
+    </div>
+    <div class="form-group">
+      <label>customerLifeTimeValue</label>
+      <input type="number"
+             class="form-control"
+             name="customerLifeTimeValue"
+             [(ngModel)]="customer.customerLifeTimeValue"
+             #customerLifeTimeValue="ngModel"
+             required>
     </div>
     <div class="form-group">
       <label>State</label>
@@ -50,7 +86,8 @@
     <br />
 
     <div *ngIf="customer">
-      <div class="alert alert-warning" *ngIf="customer._id && deleteMessageEnabled">
+      <div class="alert alert-warning"
+           *ngIf="customer._id && deleteMessageEnabled">
          Delete Customer?&nbsp;&nbsp;<button class="btn btn-danger" (click)="delete($event)">Yes</button>&nbsp;&nbsp;
          <button class="btn btn-default" (click)="deleteMessageEnabled = false">No</button>
       </div>

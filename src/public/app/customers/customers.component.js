@@ -29,7 +29,7 @@ var CustomersComponent = /** @class */ (function () {
     };
     CustomersComponent.prototype.filterChanged = function (filterText) {
         if (filterText && this.customers) {
-            var props = ['firstName', 'lastName', 'address', 'city', 'state.name', 'orderTotal'];
+            var props = ['firstName', 'lastName', 'address', 'city', 'state.name', 'orderTotal', 'customerLifeTimeValue'];
             this.filteredCustomers = this.dataFilter.filter(this.customers, props, filterText);
         }
         else {

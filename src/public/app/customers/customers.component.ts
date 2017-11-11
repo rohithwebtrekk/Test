@@ -5,8 +5,8 @@ import { DataFilterService } from '../core/data-filter.service';
 import { DataService } from '../core/data.service';
 import { ICustomer, IOrder, IPagedResults } from '../shared/interfaces';
 
-@Component({ 
-  selector: 'customers', 
+@Component({
+  selector: 'customers',
   templateUrl: './customers.component.html'
 })
 export class CustomersComponent implements OnInit {
@@ -18,10 +18,10 @@ export class CustomersComponent implements OnInit {
   totalRecords: number = 0;
   pageSize: number = 10;
 
-  constructor(private router: Router, 
+  constructor(private router: Router,
               private dataService: DataService,
               private dataFilter: DataFilterService) { }
-  
+
   ngOnInit() {
     this.title = 'Customers';
     this.getCustomersPage(1);
@@ -29,7 +29,7 @@ export class CustomersComponent implements OnInit {
 
   filterChanged(filterText: string) {
     if (filterText && this.customers) {
-        let props = ['firstName', 'lastName', 'address', 'city', 'state.name', 'orderTotal'];
+        let props = ['firstName', 'lastName', 'address', 'city', 'state.name', 'orderTotal', 'customerLifeTimeValue'];
         this.filteredCustomers = this.dataFilter.filter(this.customers, props, filterText);
     }
     else {
