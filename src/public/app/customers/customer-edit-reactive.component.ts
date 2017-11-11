@@ -19,7 +19,7 @@ export class CustomerEditReactiveComponent implements OnInit {
     gender: '',
     birthday: new Date(),
     lastContact: new Date(),
-    customerLifeTimeValue: 0;
+    customerLifeTimeValue: '';
   };
   states: IState[];
   errorMessage: string;
@@ -38,7 +38,7 @@ export class CustomerEditReactiveComponent implements OnInit {
       this.getCustomer(id);
     }
 
-    
+
     this.buildForm();
   }
 

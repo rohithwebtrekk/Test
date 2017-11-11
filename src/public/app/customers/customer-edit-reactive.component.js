@@ -25,7 +25,7 @@ var CustomerEditReactiveComponent = /** @class */ (function () {
             gender: '',
             birthday: new Date(),
             lastContact: new Date(),
-            customerLifeTimeValue: 0
+            customerLifeTimeValue: ''
         };
         this.operationText = 'Insert';
     }
