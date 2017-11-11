@@ -57,7 +57,7 @@ class CustomersRepository {
             let count = custsCount;
             console.log(`Customers count: ${count}`);
 
-            Customer.find({}, { '_id': 0, 'firstName': 1, 'lastName': 1, 'orderCount': 1, 'gender': 1, 'birthday': 1, 'lastContact': 1, 'customerLifeTimeValue': 1 })
+            Customer.find({}, { '_id': 0, 'firstName': 1, 'lastName': 1, 'gender': 1, 'birthday': 1, 'lastContact': 1, 'customerLifeTimeValue': 1 })
                     .skip(skip)
                     .limit(top)
                     .exec((err, customersSummary) => {

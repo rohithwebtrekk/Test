@@ -5,24 +5,9 @@ export interface ICustomer {
     firstName: string;
     lastName: string;
     gender: string;
-    orderCount?: number;
-    orders?: IOrder[];
-    orderTotal?: number;
     birthday?:Date;
     lastContact?:Date;
     customerLifeTimeValue?:number;
-}
-
-export interface IState {
-    abbreviation: string;
-    name: string;
-}
-
-export interface IOrder {
-    product: string;
-    price: number;
-    quantity: number;
-    orderTotal?: number;
 }
 
 export interface IRouting {

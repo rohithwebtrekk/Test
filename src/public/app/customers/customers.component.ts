@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 import { DataFilterService } from '../core/data-filter.service';
 import { DataService } from '../core/data.service';
-import { ICustomer, IOrder, IPagedResults } from '../shared/interfaces';
+import { ICustomer, IPagedResults } from '../shared/interfaces';
 
 @Component({
   selector: 'customers',
@@ -29,7 +29,7 @@ export class CustomersComponent implements OnInit {
 
   filterChanged(filterText: string) {
     if (filterText && this.customers) {
-        let props = ['firstName', 'lastName', 'orderTotal', 'customerLifeTimeValue'];
+        let props = ['firstName', 'lastName', 'customerLifeTimeValue'];
         this.filteredCustomers = this.dataFilter.filter(this.customers, props, filterText);
     }
     else {
