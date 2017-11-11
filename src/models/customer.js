@@ -12,11 +12,9 @@ const OrderSchema = new Schema({
 const CustomerSchema = new Schema({
   firstName   : { type : String, required: true, trim: true },
   lastName    : { type : String, required: true, trim: true },
-  stateId     : { type : Number, required: true },
   birthday    : { type : Date, required: true },
   lastContact : { type : Date, required: true },
   customerLifeTimeValue : { type : Number, required: true },
-  state       : State.schema ,
   gender      : { type : String },
   orderCount  : {  type : Number },
   orders      : [ OrderSchema ],

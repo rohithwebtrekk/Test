@@ -57,7 +57,7 @@ class CustomersRepository {
             let count = custsCount;
             console.log(`Customers count: ${count}`);
 
-            Customer.find({}, { '_id': 0, 'firstName': 1, 'lastName': 1, 'city': 1, 'state': 1, 'orderCount': 1, 'gender': 1, 'birthday': 1, 'lastContact': 1, 'customerLifeTimeValue': 1 })
+            Customer.find({}, { '_id': 0, 'firstName': 1, 'lastName': 1, 'orderCount': 1, 'gender': 1, 'birthday': 1, 'lastContact': 1, 'customerLifeTimeValue': 1 })
                     .skip(skip)
                     .limit(top)
                     .exec((err, customersSummary) => {
@@ -83,17 +83,13 @@ class CustomersRepository {
     }
 
     // insert a  customer
-    insertCustomer(body, state, callback) {
+    insertCustomer(body, callback) {
         console.log('*** CustomersRepository.insertCustomer');
-        console.log(state);
         let customer = new Customer();
-        let newState = { 'id': state[0].id, 'abbreviation': state[0].abbreviation, 'name': state[0].name }
         console.log(body);
 
         customer.firstName = body.firstName;
         customer.lastName = body.lastName;
-        customer.state = newState;
-        customer.stateId = newState.id;
         customer.gender = body.gender;
         customer.birthday = body.birthday;
         customer.lastContact = body.lastContact;
@@ -108,10 +104,10 @@ class CustomersRepository {
         });
     }
 
-    updateCustomer(id, body, state, callback) {
+    updateCustomer(id, body, callback) {
         console.log('*** CustomersRepository.editCustomer');
 
-        let stateObj = { 'id': state[0].id, 'abbreviation': state[0].abbreviation, 'name': state[0].name }
+
 
         Customer.findById(id, (err, customer)  => {
             if (err) {
@@ -121,8 +117,6 @@ class CustomersRepository {
 
             customer.firstName = body.firstName || customer.firstName;
             customer.lastName = body.lastName || customer.lastName;
-            customer.state = stateObj;
-            customer.stateId = stateObj.id;
             customer.gender = body.gender || customer.gender;
             customer.birthday = body.birthday || customer.birthday;
             customer.lastContact = body.lastContact || customer.lastContact;

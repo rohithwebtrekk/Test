@@ -33,7 +33,6 @@ var CustomerEditComponent = /** @class */ (function () {
             this.operationText = 'Update';
             this.getCustomer(id);
         }
-        this.getStates();
     };
     CustomerEditComponent.prototype.getCustomer = function (id) {
         var _this = this;
@@ -41,10 +40,6 @@ var CustomerEditComponent = /** @class */ (function () {
             .subscribe(function (customer) {
             _this.customer = customer;
         }, function (err) { return console.log(err); });
-    };
-    CustomerEditComponent.prototype.getStates = function () {
-        var _this = this;
-        this.dataService.getStates().subscribe(function (states) { return _this.states = states; });
     };
     CustomerEditComponent.prototype.submit = function () {
         var _this = this;

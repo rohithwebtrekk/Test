@@ -38,7 +38,7 @@ export class CustomerEditReactiveComponent implements OnInit {
       this.getCustomer(id);
     }
 
-    this.getStates();
+    
     this.buildForm();
   }
 
@@ -56,16 +56,12 @@ export class CustomerEditReactiveComponent implements OnInit {
         firstName:  [this.customer.firstName, Validators.required],
         lastName:   [this.customer.lastName, Validators.required],
         gender:     [this.customer.gender, Validators.required],
-        stateId:    [this.customer.stateId, Validators.required]
         birthday:   [this.customer.birthday],
         lastContact: [this.customer.lastContact],
         customerLifeTimeValue: [this.customer.customerLifeTimeValue],
       });
   }
 
-  getStates() {
-    this.dataService.getStates().subscribe((states: IState[]) => this.states = states);
-  }
 
   submit({ value, valid }: { value: ICustomer, valid: boolean }) {
 

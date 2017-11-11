@@ -56,7 +56,7 @@ class DBSeeder {
         { "product": "Basket", "price": 29.99, "quantity": 1 },
         { "product": "Yarn", "price": 9.99, "quantity": 1 },
         { "product": "Needes", "price": 5.99, "quantity": 1 },
-    
+
         ];
 
         Customer.remove({});
@@ -76,8 +76,6 @@ class DBSeeder {
             var customer = new Customer({
                 'firstName': nameGenderHost[0],
                 'lastName': nameGenderHost[1],
-                'state': state,
-                'stateId': citiesIds[i],
                 'gender': nameGenderHost[2],
                 'orderCount': 0
             });

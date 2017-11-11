@@ -4,8 +4,6 @@ export interface ICustomer {
     _id?: string;
     firstName: string;
     lastName: string;
-    state?: IState;
-    stateId?: number;
     gender: string;
     orderCount?: number;
     orders?: IOrder[];

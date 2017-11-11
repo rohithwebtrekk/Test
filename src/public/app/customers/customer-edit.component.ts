@@ -33,8 +33,6 @@ export class CustomerEditComponent implements OnInit {
       this.operationText = 'Update';
       this.getCustomer(id);
     }
-
-    this.getStates();
   }
 
   getCustomer(id: string) {
@@ -43,10 +41,6 @@ export class CustomerEditComponent implements OnInit {
           this.customer = customer;
         },
         (err: any) => console.log(err));
-  }
-
-  getStates() {
-    this.dataService.getStates().subscribe((states: IState[]) => this.states = states);
   }
 
   submit() {

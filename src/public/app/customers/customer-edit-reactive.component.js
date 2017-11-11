@@ -35,7 +35,6 @@ var CustomerEditReactiveComponent = /** @class */ (function () {
             this.operationText = 'Update';
             this.getCustomer(id);
         }
-        this.getStates();
         this.buildForm();
     };
     CustomerEditReactiveComponent.prototype.getCustomer = function (id) {
@@ -51,15 +50,10 @@ var CustomerEditReactiveComponent = /** @class */ (function () {
             firstName: [this.customer.firstName, forms_1.Validators.required],
             lastName: [this.customer.lastName, forms_1.Validators.required],
             gender: [this.customer.gender, forms_1.Validators.required],
-            stateId: [this.customer.stateId, forms_1.Validators.required],
             birthday: [this.customer.birthday],
             lastContact: [this.customer.lastContact],
             customerLifeTimeValue: [this.customer.customerLifeTimeValue],
         });
-    };
-    CustomerEditReactiveComponent.prototype.getStates = function () {
-        var _this = this;
-        this.dataService.getStates().subscribe(function (states) { return _this.states = states; });
     };
     CustomerEditReactiveComponent.prototype.submit = function (_a) {
         var _this = this;
