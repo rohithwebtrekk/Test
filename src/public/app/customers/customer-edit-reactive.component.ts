@@ -14,12 +14,9 @@ export class CustomerEditReactiveComponent implements OnInit {
 
   customerForm: FormGroup;
   customer: ICustomer = {
-    firstName: '',
-    lastName: '',
-    gender: '',
-    birthday: new Date(),
-    lastContact: new Date(),
-    customerLifeTimeValue: '';
+    suggestions: '',
+    subTitle: '',
+    rating: '';
   };
   states: IState[];
   errorMessage: string;
@@ -53,12 +50,9 @@ export class CustomerEditReactiveComponent implements OnInit {
 
   buildForm() {
       this.customerForm = this.formBuilder.group({
-        firstName:  [this.customer.firstName, Validators.required],
-        lastName:   [this.customer.lastName, Validators.required],
-        gender:     [this.customer.gender, Validators.required],
-        birthday:   [this.customer.birthday],
-        lastContact: [this.customer.lastContact],
-        customerLifeTimeValue: [this.customer.customerLifeTimeValue],
+        suggestions:  [this.customer.suggestions, Validators.required],
+        subTitle:   [this.customer.subTitle, Validators.required],
+        rating: [this.customer.rating],
       });
   }
 

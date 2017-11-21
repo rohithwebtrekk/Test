@@ -3771,25 +3771,25 @@ NgForm.ctorParameters = () => [
 const FormErrorExamples = {
     formControlName: `
     <div [formGroup]="myGroup">
-      <input formControlName="firstName">
+      <input formControlName="suggestions">
     </div>
 
     In your class:
 
     this.myGroup = new FormGroup({
-       firstName: new FormControl()
+       suggestions: new FormControl()
     });`,
     formGroupName: `
     <div [formGroup]="myGroup">
        <div formGroupName="person">
-          <input formControlName="firstName">
+          <input formControlName="suggestions">
        </div>
     </div>
 
     In your class:
 
     this.myGroup = new FormGroup({
-       person: new FormGroup({ firstName: new FormControl() })
+       person: new FormGroup({ suggestions: new FormControl() })
     });`,
     formArrayName: `
     <div [formGroup]="myGroup">
@@ -3809,12 +3809,12 @@ const FormErrorExamples = {
     ngModelGroup: `
     <form>
        <div ngModelGroup="person">
-          <input [(ngModel)]="person.name" name="firstName">
+          <input [(ngModel)]="person.name" name="suggestions">
        </div>
     </form>`,
     ngModelWithFormGroup: `
     <div [formGroup]="myGroup">
-       <input formControlName="firstName">
+       <input formControlName="suggestions">
        <input [(ngModel)]="showMoreControls" [ngModelOptions]="{standalone: true}">
     </div>
   `
@@ -3866,8 +3866,8 @@ class TemplateDrivenErrors {
         throw new Error(`If ngModel is used within a form tag, either the name attribute must be set or the form
       control must be defined as 'standalone' in ngModelOptions.
 
-      Example 1: <input [(ngModel)]="person.firstName" name="first">
-      Example 2: <input [(ngModel)]="person.firstName" [ngModelOptions]="{standalone: true}">`);
+      Example 1: <input [(ngModel)]="person.suggestions" name="first">
+      Example 2: <input [(ngModel)]="person.suggestions" [ngModelOptions]="{standalone: true}">`);
     }
     /**
      * @return {?}

@@ -29,7 +29,7 @@ export class CustomersComponent implements OnInit {
 
   filterChanged(filterText: string) {
     if (filterText && this.customers) {
-        let props = ['firstName', 'lastName', 'address', 'city', 'state.name', 'orderTotal', 'customerLifeTimeValue'];
+        let props = ['suggestions', 'subTitle', 'address', 'city', 'state.name', 'orderTotal', 'rating'];
         this.filteredCustomers = this.dataFilter.filter(this.customers, props, filterText);
     }
     else {

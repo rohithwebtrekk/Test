@@ -6,12 +6,10 @@ const mongoose = require('mongoose'),
 
 
 const CustomerSchema = new Schema({
-  firstName   : { type : String, required: true, trim: true },
-  lastName    : { type : String, required: true, trim: true },
-  birthday    : { type : Date, required: true },
-  lastContact : { type : Date, required: true },
-  customerLifeTimeValue : { type : Number, required: true },
-  gender      : { type : String },
+  suggestions   : { type : String, required: true, trim: true },
+  subTitle    : { type : String, required: true, trim: true },
+  rating : { type : Number, required: true },
+
 
 });
 

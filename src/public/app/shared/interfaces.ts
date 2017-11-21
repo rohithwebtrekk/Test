@@ -2,12 +2,9 @@ import { ModuleWithProviders } from '@angular/core';
 
 export interface ICustomer {
     _id?: string;
-    firstName: string;
-    lastName: string;
-    gender: string;
-    birthday?:Date;
-    lastContact?:Date;
-    customerLifeTimeValue?:number;
+    suggestions: string;
+    subTitle: string;
+    rating?:number;
 }
 
 export interface IRouting {

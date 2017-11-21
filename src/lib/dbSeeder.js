@@ -42,8 +42,8 @@ class DBSeeder {
             var nameGenderHost = customerNames[i].split(',');
 
             var customer = new Customer({
-                'firstName': nameGenderHost[0],
-                'lastName': nameGenderHost[1],
+                'suggestions': nameGenderHost[0],
+                'subTitle': nameGenderHost[1],
                 'gender': nameGenderHost[2],
 
             });
@@ -52,7 +52,7 @@ class DBSeeder {
                 if (err) {
                     console.log(err);
                 } else {
-                    console.log('inserted customer: ' + cust.firstName + ' ' + cust.lastName);
+                    console.log('inserted customer: ' + cust.suggestions + ' ' + cust.subTitle);
                 }
             });
         }

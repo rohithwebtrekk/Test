@@ -2,7 +2,7 @@
   <header>
       <h3>
 
-          {{ customer.firstName }} {{ customer.lastName }}
+          {{ customer.suggestions }} {{ customer.subTitle }}
       </h3>
   </header>
   <br />
@@ -11,70 +11,31 @@
         class="editForm"
         novalidate>
     <div class="form-group">
-      <label>First Name</label>
+      <label>Suggestions</label>
       <input type="text"
              class="form-control"
-             formControlName="firstName" />
+             formControlName="suggestions" />
       <div class="alert alert-danger"
-           [hidden]="customerForm.controls.firstName.untouched ||
-           customerForm.controls.firstName.valid">First Name is required</div>
+           [hidden]="customerForm.controls.suggestions.untouched ||
+           customerForm.controls.suggestions.valid">Suggestions is required</div>
     </div>
     <div class="form-group">
-      <label>Last Name</label>
+      <label>Sub Title</label>
       <input type="text"
              class="form-control"
-             formControlName="lastName">
+             formControlName="subTitle">
       <div class="alert alert-danger"
-           [hidden]="customerForm.controls.lastName.untouched ||
-           customerForm.controls.lastName.valid">Last Name is required</div>
+           [hidden]="customerForm.controls.subTitle.untouched ||
+           customerForm.controls.subTitle.valid">Sub Title is required</div>
     </div>
+  
     <div class="form-group">
-      <label>Gender</label>
-      <br />
-      <div class="radio">
-        <label>
-          <input type="radio"
-                 name="gender"
-                 formControlName="gender"
-                 value="Male" />
-          Male
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio"
-                 name="gender"
-                 formControlName="gender"
-                 value="Female"  />
-          Female
-        </label>
-      </div>
-    </div>
-    <div class="form-group">
-      <label>Birthday</label>
-      <input type="date"
-             class="form-control"
-             name="birthday"
-             [(ngModel)]="customer.birthday"
-             #birthday="ngModel"
-             required>
-    </div>
-    <div class="form-group">
-      <label>lastContact</label>
-      <input type="date"
-             class="form-control"
-             name="lastContact"
-             [(ngModel)]="customer.lastContact"
-             #lastContact="ngModel"
-             required>
-    </div>
-    <div class="form-group">
-      <label>customerLifeTimeValue</label>
+      <label>rating</label>
       <input type="number"
              class="form-control"
-             name="customerLifeTimeValue"
-             [(ngModel)]="customer.customerLifeTimeValue"
-             #customerLifeTimeValue="ngModel"
+             name="rating"
+             [(ngModel)]="customer.rating"
+             #rating="ngModel"
              required>
     </div>
     <div class="form-group">

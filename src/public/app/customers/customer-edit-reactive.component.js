@@ -20,12 +20,9 @@ var CustomerEditReactiveComponent = /** @class */ (function () {
         this.dataService = dataService;
         this.formBuilder = formBuilder;
         this.customer = {
-            firstName: '',
-            lastName: '',
-            gender: '',
-            birthday: new Date(),
-            lastContact: new Date(),
-            customerLifeTimeValue: ''
+            suggestions: '',
+            subTitle: '',
+            rating: ''
         };
         this.operationText = 'Insert';
     }
@@ -47,12 +44,9 @@ var CustomerEditReactiveComponent = /** @class */ (function () {
     };
     CustomerEditReactiveComponent.prototype.buildForm = function () {
         this.customerForm = this.formBuilder.group({
-            firstName: [this.customer.firstName, forms_1.Validators.required],
-            lastName: [this.customer.lastName, forms_1.Validators.required],
-            gender: [this.customer.gender, forms_1.Validators.required],
-            birthday: [this.customer.birthday],
-            lastContact: [this.customer.lastContact],
-            customerLifeTimeValue: [this.customer.customerLifeTimeValue],
+            suggestions: [this.customer.suggestions, forms_1.Validators.required],
+            subTitle: [this.customer.subTitle, forms_1.Validators.required],
+            rating: [this.customer.rating],
         });
     };
     CustomerEditReactiveComponent.prototype.submit = function (_a) {

@@ -11,12 +11,9 @@ import { ICustomer, IState } from '../shared/interfaces';
 export class CustomerEditComponent implements OnInit {
 
   customer: ICustomer = {
-    firstName: '',
-    lastName: '',
-    gender: '',
-    birthday: new Date(),
-    lastContact: new Date(),
-    customerLifeTimeValue: '',
+    suggestions: '',
+    subTitle: '',
+    rating: '',
   };
   states: IState[];
   errorMessage: string;

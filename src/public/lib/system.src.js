@@ -2966,12 +2966,12 @@ var formatHelpers = function (loader) {
       // still loading anonymously
       // because it is done widely enough to be useful
       // as soon as there is more than one define, this gets removed though
-      if (lastNamedDefine) {
-        lastNamedDefine = undefined;
+      if (subTitledDefine) {
+        subTitledDefine = undefined;
         multipleNamedDefines = true;
       }
       else if (!multipleNamedDefines) {
-        lastNamedDefine = [deps, execute];
+        subTitledDefine = [deps, execute];
       }
     }
   }
@@ -3212,19 +3212,19 @@ function wrapEsModuleExecute (execute) {
 
 // generate anonymous define from singular named define
 var multipleNamedDefines = false;
-var lastNamedDefine;
+var subTitledDefine;
 var curMetaDeps;
 var curEsModule = false;
 function clearLastDefine (metaDeps, esModule) {
   curMetaDeps = metaDeps;
   curEsModule = esModule;
-  lastNamedDefine = undefined;
+  subTitledDefine = undefined;
   multipleNamedDefines = false;
 }
 function registerLastDefine (loader) {
-  if (lastNamedDefine)
-    loader.registerDynamic(curMetaDeps ? lastNamedDefine[0].concat(curMetaDeps) : lastNamedDefine[0],
-        false, curEsModule ? wrapEsModuleExecute(lastNamedDefine[1]) : lastNamedDefine[1]);
+  if (subTitledDefine)
+    loader.registerDynamic(curMetaDeps ? subTitledDefine[0].concat(curMetaDeps) : subTitledDefine[0],
+        false, curEsModule ? wrapEsModuleExecute(subTitledDefine[1]) : subTitledDefine[1]);
 
   // bundles are an empty module
   else if (multipleNamedDefines)

@@ -33,7 +33,7 @@ class CustomersRepository {
             console.log(`Customers count: ${count}`);
 
             Customer.find({})
-                    .sort({lastName: 1})
+                    .sort({subTitle: 1})
                     .skip(skip)
                     .limit(top)
                     .exec((err, customers) => {
@@ -57,7 +57,7 @@ class CustomersRepository {
             let count = custsCount;
             console.log(`Customers count: ${count}`);
 
-            Customer.find({}, { '_id': 0, 'firstName': 1, 'lastName': 1, 'gender': 1, 'birthday': 1, 'lastContact': 1, 'customerLifeTimeValue': 1 })
+            Customer.find({}, { '_id': 0, 'suggestions': 1, 'subTitle': 1, 'rating': 1 })
                     .skip(skip)
                     .limit(top)
                     .exec((err, customersSummary) => {
@@ -88,12 +88,9 @@ class CustomersRepository {
         let customer = new Customer();
         console.log(body);
 
-        customer.firstName = body.firstName;
-        customer.lastName = body.lastName;
-        customer.gender = body.gender;
-        customer.birthday = body.birthday;
-        customer.lastContact = body.lastContact;
-        customer.customerLifeTimeValue = body.customerLifeTimeValue;
+        customer.suggestions = body.suggestions;
+        customer.subTitle = body.subTitle;
+        customer.rating = body.rating;
         customer.save((err, customer) => {
             if (err) {
                 console.log(`*** CustomersRepository insertCustomer error: ${err}`);
@@ -115,12 +112,9 @@ class CustomersRepository {
                 return callback(err);
             }
 
-            customer.firstName = body.firstName || customer.firstName;
-            customer.lastName = body.lastName || customer.lastName;
-            customer.gender = body.gender || customer.gender;
-            customer.birthday = body.birthday || customer.birthday;
-            customer.lastContact = body.lastContact || customer.lastContact;
-            customer.customerLifeTimeValue = body.customerLifeTimeValue || customer.customerLifeTimeValue;
+            customer.suggestions = body.suggestions || customer.suggestions;
+            customer.subTitle = body.subTitle || customer.subTitle;
+            customer.rating = body.rating || customer.rating;
 
             customer.save((err, customer) => {
                 if (err) {

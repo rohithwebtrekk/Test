@@ -1,5 +1,5 @@
 
-## Software Requirements To Run Locally (there's a Docker option below as well)
+## Software Requirements To Run Locally
 
 * Node.js 6.10 or higher
 * MongoDB 3.2 or higher

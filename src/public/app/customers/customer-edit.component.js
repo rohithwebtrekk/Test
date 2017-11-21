@@ -18,12 +18,9 @@ var CustomerEditComponent = /** @class */ (function () {
         this.route = route;
         this.dataService = dataService;
         this.customer = {
-            firstName: '',
-            lastName: '',
-            gender: '',
-            birthday: new Date(),
-            lastContact: new Date(),
-            customerLifeTimeValue: '',
+            suggestions: '',
+            subTitle: '',
+            rating: '',
         };
         this.operationText = 'Insert';
     }
