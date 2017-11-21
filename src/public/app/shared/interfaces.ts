@@ -4,7 +4,9 @@ export interface ICustomer {
     _id?: string;
     suggestions: string;
     subTitle: string;
+    isPreorder: string;
     rating?:number;
+    reviews?:number;
 }
 
 export interface IRouting {

@@ -13,7 +13,9 @@ export class CustomerEditComponent implements OnInit {
   customer: ICustomer = {
     suggestions: '',
     subTitle: '',
+    isPreorder: '',
     rating: '',
+    reviews: '',
   };
   states: IState[];
   errorMessage: string;

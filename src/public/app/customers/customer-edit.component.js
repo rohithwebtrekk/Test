@@ -20,7 +20,9 @@ var CustomerEditComponent = /** @class */ (function () {
         this.customer = {
             suggestions: '',
             subTitle: '',
+            isPreorder: '',
             rating: '',
+            reviews: '',
         };
         this.operationText = 'Insert';
     }

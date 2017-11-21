@@ -22,7 +22,9 @@ var CustomerEditReactiveComponent = /** @class */ (function () {
         this.customer = {
             suggestions: '',
             subTitle: '',
-            rating: ''
+            rating: '',
+            reviews: '',
+            isPreorder: '',
         };
         this.operationText = 'Insert';
     }
@@ -47,6 +49,7 @@ var CustomerEditReactiveComponent = /** @class */ (function () {
             suggestions: [this.customer.suggestions, forms_1.Validators.required],
             subTitle: [this.customer.subTitle, forms_1.Validators.required],
             rating: [this.customer.rating],
+            reviews: [this.customer.reviews],
         });
     };
     CustomerEditReactiveComponent.prototype.submit = function (_a) {

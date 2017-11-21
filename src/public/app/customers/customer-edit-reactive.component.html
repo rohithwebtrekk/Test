@@ -28,13 +28,30 @@
            [hidden]="customerForm.controls.subTitle.untouched ||
            customerForm.controls.subTitle.valid">Sub Title is required</div>
     </div>
-  
     <div class="form-group">
-      <label>rating</label>
+      <label>isPreorder</label>
+      <input type="text"
+             class="form-control"
+             formControlName="isPreorder">
+      <div class="alert alert-danger"
+           [hidden]="customerForm.controls.isPreorder.untouched ||
+           customerForm.controls.isPreorder.valid">isPreorder is required</div>
+    </div>
+    <div class="form-group">
+      <label>Rating</label>
       <input type="number"
              class="form-control"
              name="rating"
              [(ngModel)]="customer.rating"
+             #rating="ngModel"
+             required>
+    </div>
+    <div class="form-group">
+      <label>Reviews</label>
+      <input type="number"
+             class="form-control"
+             name="reviews"
+             [(ngModel)]="customer.reviews"
              #rating="ngModel"
              required>
     </div>

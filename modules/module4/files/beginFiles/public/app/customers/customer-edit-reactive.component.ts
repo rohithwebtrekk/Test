@@ -16,7 +16,9 @@ export class CustomerEditReactiveComponent implements OnInit {
   customer: ICustomer = {
     suggestions: '',
     subTitle: '',
-    rating: 0;
+    rating: 0,
+    reviews: 0,
+    isPreorder: '',
   };
   states: IState[];
   errorMessage: string;
@@ -55,6 +57,8 @@ export class CustomerEditReactiveComponent implements OnInit {
         suggestions:  [this.customer.suggestions, Validators.required],
         subTitle:   [this.customer.subTitle, Validators.required],
         stateId:    [this.customer.stateId, Validators.required],
+        rating:    [this.customer.rating],
+        reviews:    [this.customer.reviews],
       });
   }
 

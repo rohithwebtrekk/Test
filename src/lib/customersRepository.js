@@ -57,7 +57,7 @@ class CustomersRepository {
             let count = custsCount;
             console.log(`Customers count: ${count}`);
 
-            Customer.find({}, { '_id': 0, 'suggestions': 1, 'subTitle': 1, 'rating': 1 })
+            Customer.find({}, { '_id': 0, 'suggestions': 1, 'subTitle': 1, 'rating': 1, 'reviews': 1, 'isPreorder': 1 })
                     .skip(skip)
                     .limit(top)
                     .exec((err, customersSummary) => {
@@ -90,7 +90,9 @@ class CustomersRepository {
 
         customer.suggestions = body.suggestions;
         customer.subTitle = body.subTitle;
+        customer.isPreorder = body.isPreorder;
         customer.rating = body.rating;
+        customer.reviews = body.reviews;
         customer.save((err, customer) => {
             if (err) {
                 console.log(`*** CustomersRepository insertCustomer error: ${err}`);
@@ -115,7 +117,8 @@ class CustomersRepository {
             customer.suggestions = body.suggestions || customer.suggestions;
             customer.subTitle = body.subTitle || customer.subTitle;
             customer.rating = body.rating || customer.rating;
-
+            customer.reviews = body.reviews || customer.reviews;
+            customer.isPreorder = body.isPreorder;
             customer.save((err, customer) => {
                 if (err) {
                     console.log(`*** CustomersRepository.updateCustomer error: ${err}`);

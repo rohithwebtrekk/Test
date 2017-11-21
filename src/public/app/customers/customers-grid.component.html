@@ -7,14 +7,18 @@
                         <tr>
                             <th (click)="sort('suggestions')">Suggestions</th>
                             <th (click)="sort('subTitle')">Sub Title</th>
+                            <th (click)="sort('isPreorder')">isPreorder</th>
                             <th (click)="sort('rating')">Rating</th>
+                            <th (click)="sort('reviews')">Reviews</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let customer of customers;trackBy:trackby.customer">
                             <td><a [routerLink]="['/customers',customer._id]">{{ customer.suggestions | capitalize }}</a></td>
                             <td>{{ customer.subTitle | capitalize }}</td>
+                            <td>{{ customer.isPreorder | capitalize }}</td>
                             <td>{{ customer.rating | number : '1.2-2' }}</td>
+                            <td>{{ customer.reviews | number : '1.2-2' }}</td>
                         </tr>
                         <tr *ngIf="!customers.length">
                             <td>&nbsp;</td>

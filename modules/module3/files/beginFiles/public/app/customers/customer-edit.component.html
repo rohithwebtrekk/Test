@@ -25,13 +25,31 @@
              required>
       <div class="alert alert-danger" [hidden]="subTitle.untouched || subTitle.valid">Last Name is required</div>
     </div>
-    
     <div class="form-group">
-      <label>Customer Life Time Value</label>
+      <label>isPreorder</label>
+      <input type="text"
+             class="form-control"
+             name="isPreorder"
+             [(ngModel)]="customer.isPreorder"
+             #subTitle="ngModel"
+             required>
+      <div class="alert alert-danger" [hidden]="isPreorder.untouched || isPreorder.valid">isPreorder is required</div>
+    </div>
+    <div class="form-group">
+      <label>Rating</label>
       <input type="number"
              class="form-control"
              name="rating"
              [(ngModel)]="customer.rating"
+             #rating="ngModel"
+             required>
+    </div>
+    <div class="form-group">
+      <label>Reviews</label>
+      <input type="number"
+             class="form-control"
+             name="reviews"
+             [(ngModel)]="customer.reviews"
              #rating="ngModel"
              required>
     </div>

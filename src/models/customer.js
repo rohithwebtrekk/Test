@@ -8,8 +8,9 @@ const mongoose = require('mongoose'),
 const CustomerSchema = new Schema({
   suggestions   : { type : String, required: true, trim: true },
   subTitle    : { type : String, required: true, trim: true },
+  isPreorder    : { type : String, required: true, trim: true },
   rating : { type : Number, required: true },
-
+  reviews : { type : Number, required: true },
 
 });
 
